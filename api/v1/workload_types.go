@@ -17,6 +17,7 @@ limitations under the License.
 package v1
 
 import (
+	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 
@@ -28,14 +29,20 @@ type WorkloadSpec struct {
 	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
 	// Important: Run "make" to regenerate code after modifying this file
 
-	// Foo is an example field of Workload. Edit workload_types.go to remove/update
-	Foo string `json:"foo,omitempty"`
+	// The name of the service account to use to run this workload.
+	// Defaults to the workload name.
+	// +optional
+	ServiceAccountName string `json:"serviceAccountName,omitempty"`
 }
 
 // WorkloadStatus defines the observed state of Workload
 type WorkloadStatus struct {
 	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
 	// Important: Run "make" to regenerate code after modifying this file
+
+	// Pointer to ServiceAccount object.
+	// +optional
+	ServiceAccount corev1.ObjectReference `json:"serviceAccount,omitempty"`
 }
 
 //+kubebuilder:object:root=true
