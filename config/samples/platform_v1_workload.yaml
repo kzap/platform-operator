@@ -1,0 +1,12 @@
+apiVersion: platform.mydev.org/v1
+kind: Workload
+metadata:
+  labels:
+    app.kubernetes.io/name: workload
+    app.kubernetes.io/instance: workload-sample
+    app.kubernetes.io/part-of: platform-operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: platform-operator
+  name: workload-sample
+spec:
+  # TODO(user): Add fields here
