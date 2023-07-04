@@ -21,7 +21,7 @@ import (
 
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
-	platformv1 "mydev.org/platform-operator/api/v1"
+	platformv1 "mydev.org/platform-operator/api/platform/v1"
 )
 
 func (r *WorkloadReconciler) desiredServiceAccount(workload platformv1.Workload) (corev1.ServiceAccount, error) {

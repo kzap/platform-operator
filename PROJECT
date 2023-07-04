@@ -5,6 +5,7 @@
 domain: mydev.org
 layout:
 - go.kubebuilder.io/v4
+multigroup: true
 projectName: platform-operator
 repo: mydev.org/platform-operator
 resources:
@@ -15,6 +16,6 @@ resources:
   domain: mydev.org
   group: platform
   kind: Workload
-  path: mydev.org/platform-operator/api/v1
+  path: mydev.org/platform-operator/api/platform/v1
   version: v1
 version: "3"

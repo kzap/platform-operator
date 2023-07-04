@@ -25,7 +25,7 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	"sigs.k8s.io/controller-runtime/pkg/log"
 
-	platformv1 "mydev.org/platform-operator/api/v1"
+	platformv1 "mydev.org/platform-operator/api/platform/v1"
 
 	ref "k8s.io/client-go/tools/reference"
 )
