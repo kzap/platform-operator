@@ -1,0 +1,3 @@
+apiVersion: config.mydev.org/v1alpha1
+kind: OperatorConfig
+clusterName: test-cluster
