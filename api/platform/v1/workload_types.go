@@ -43,6 +43,9 @@ type WorkloadStatus struct {
 	// Pointer to ServiceAccount object.
 	// +optional
 	ServiceAccount corev1.ObjectReference `json:"serviceAccount,omitempty"`
+
+	// Conditions represent the latest available observations of an object's state
+	Conditions []metav1.Condition `json:"conditions"`
 }
 
 //+kubebuilder:object:root=true
